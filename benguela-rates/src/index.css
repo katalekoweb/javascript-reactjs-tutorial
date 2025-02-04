@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: #e9eef3;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.convert-card {
+  margin-top: 50px; 
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 5px 5px 5px #ccc;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.input {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.currencies {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.currencies div {
+ 
+  margin: 0px 10px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.btn {
+  background-color: black;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.result {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 30px;
+}
