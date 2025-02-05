@@ -63,11 +63,13 @@ const Home = () => {
   }
 
   const handleFromChange = event => {
-    setFrom(event.target.value)
+    setFrom(f => event.target.value)
+    // convert()
   }
 
   const handleToChange = event => {
-    setTo(event.target.value)
+    setTo(t => event.target.value)
+    // convert()
   }
 
   return (
@@ -134,7 +136,7 @@ const Home = () => {
           </div>
         )}
 
-        {result && <div className='result'>Result: {result}</div>}
+        {result && <div className='result'>Result: {result + ' ' + to }</div>}
       </div>
     </div>
   )
