@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 
 const Home = () => {
     const [currencies, setCurrencies] = useState([])
+    const [amount, setAmount] = useState(1)
     const [from, setFrom] = useState("USD")
     const [to, setTo] = useState("AOA")
     const [result, setResult] = useState("")
@@ -17,7 +18,7 @@ const Home = () => {
     const convert = () => {
         axios.get(`https://api.fastforex.io/fetch-one?api_key=233d45481e-c588f7f6a8-sr60yq&from=${from}&to=${to}`).then((res) => {
             if (res.data?.result) {
-                setResult(res.data?.result[to])
+                setResult(res.data?.result[to] * amount)
             }
         })
     }
@@ -59,11 +60,11 @@ const Home = () => {
       <div className="convert-card">
 
         <div>
-            <input type="text" className='input' placeholder='Enter the amount...' />
+            <input type="text" className='input' value={amount} onChange={(e) => setAmount(e.target.value)} placeholder='Enter the amount...' />
         </div>
 
         <div className="currencies">
-            <div>
+            <div style={{marginRight: '10px'}}>
                 From <select style={{width: '100%'}} name="from" id="from" onChange={handleFromChange} value={from}>
                     {currencies.map((currency, index) => <option value={ currency[0] }> { currency[1] } </option> )}
                 </select>

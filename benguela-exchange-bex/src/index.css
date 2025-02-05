@@ -15,13 +15,13 @@ body {
   background-color: white;
   box-shadow: 5px 5px 5px #ccc;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 8px;
 }
 
 .input {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
-  width: 90%;
+  width: 96%;
   display: block;
   margin: 0 auto;
 }
@@ -38,7 +38,7 @@ body {
 
 .currencies div {
  
-  margin: 0px 10px;
+  margin: 0px 0px;
 }
 
 input[type="text"], select {
