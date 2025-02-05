@@ -78,6 +78,8 @@ h2 {
   font-weight: 300;
   text-transform: uppercase;
   color: #3081c4;
+  padding: 0;
+  margin: 0;
 }
 
 .input {

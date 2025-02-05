@@ -17,9 +17,8 @@ const Home = () => {
   }, [])
 
   const convert = () => {
-
     if (!amount) {
-        setAmount(1)
+      setAmount(1)
     }
 
     setConverting(c => true)
@@ -33,8 +32,9 @@ const Home = () => {
         }
 
         setConverting(c => false)
-      }).catch((err) => {
-        console.log(err);
+      })
+      .catch(err => {
+        console.log(err)
         setConverting(c => false)
       })
   }
@@ -71,12 +71,14 @@ const Home = () => {
   }
 
   return (
-    <div style={{padding: '0px 30px'}}>
-        
+    <div style={{ padding: '0px 30px' }}>
       <div className='convert-card'>
 
-      <div>
-            <h2>Convert now!</h2>
+        <div style={{marginBottom: '50px'}}>
+          <h2>Convert now</h2>
+          <p style={{ color: '#cc6600', textAlign: 'center' }}>
+            Choose between more than 50 currencies around the world!
+          </p>
         </div>
 
         <div>
@@ -120,19 +122,20 @@ const Home = () => {
           </div>
         </div>
 
-        <div style={{textAlign: 'center', padding: '10px 0'}}>
-            { converting && 'Converting. Wait a few moment...' }
+        <div style={{ textAlign: 'center', padding: '10px 0' }}>
+          {converting && 'Converting. Wait a few moment...'}
         </div>
 
-        { !converting && <div>
-          <button className='btn' onClick={convert}>
-            Convert
-          </button>
-        </div> }
+        {!converting && (
+          <div>
+            <button className='btn' onClick={convert}>
+              Convert
+            </button>
+          </div>
+        )}
 
-        { result && <div className='result'>Result: {result}</div> }
+        {result && <div className='result'>Result: {result}</div>}
       </div>
-      
     </div>
   )
 }
